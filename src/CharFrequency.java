@@ -21,7 +21,7 @@ public class CharFrequency {
             if(map.containsKey(stringChar)) {
                 map.put(stringChar,map.get(stringChar) + 1);
             }
-            map.putIfAbsent(stringChar,1);
+            map.putIfAbsent(stringChar,1); // or put it in else
         }
         System.out.println(map);
     }
