@@ -60,7 +60,7 @@ public class OneForAll {
         System.out.println(obj1);
         List<OneForAll> details = Arrays.asList(obj1, obj2);
         System.out.println(details);
-//        details.stream().filter(p -> p.getName().equals("Nikhil") || p.getAge() == 23).forEach(System.out::println);
+        details.stream().filter(p -> p.getName().equals("Nikhil") || p.getAge() == 22).forEach(System.out::println);
 
         //HashMap Implementation
         ImplementHashMap impHmap = new ImplementHashMap();
@@ -68,6 +68,7 @@ public class OneForAll {
 
         //
         String[] arr = {"Nik","Shr"};
+        //with new arraylist; asList will create fixed length list, no extra element can be added then
         List<String> arrayList = new ArrayList<>(Arrays.asList(arr));
         arrayList.add("one more");
         System.out.println(arrayList);
@@ -78,6 +79,18 @@ public class OneForAll {
         char ch = 'a';
         o1 = ""+ch;
         System.out.println(o1);
+
+        Set<Integer> st = new HashSet<>();
+        List<Integer> st1 = new LinkedList<>();
+        st1.add(1);
+        st1.add(2);
+
+        st.addAll(st1);
+        st1.add(1);
+        System.out.println("str1 "+st1);
+        System.out.println("st "+ st);
+        System.out.println(st.containsAll(st1));
+        st.forEach(e-> System.out.println(e));
 
 
 

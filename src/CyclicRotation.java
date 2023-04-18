@@ -25,6 +25,7 @@ class CyclicRotation {
         //reverse from o to n-k-1 i.e. first part
         System.out.println("first"+Arrays.toString(arr));
         reverseArray(arr,0, n-k-1);
+
         //reverse from n-k to n-1
         System.out.println("second"+Arrays.toString(arr));
         reverseArray(arr, n-k, n-1);
